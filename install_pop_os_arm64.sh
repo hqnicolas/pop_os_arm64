@@ -29,8 +29,14 @@ sudo apt purge --autoremove linux*-raspi* -y
 #Fix the Pop-OS APT sources
 sudo sed -i 's/Enabled: yes/Enabled: no/g' /etc/apt/sources.list.d/system.sources /etc/apt/sources.list.d/pop-os-apps.sources
 
+# add system76 ppa
+sudo add-apt-repository ppa:system76/pop -y
+
 # Update system again
 sudo apt update -y && sudo apt full-upgrade -y
+
+# install desktop from system76 ppa
+sudo apt install pop-desktop
 
 # Reboot the system
 sudo reboot
