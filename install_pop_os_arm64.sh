@@ -4,7 +4,7 @@
 sudo apt update -y && sudo apt full-upgrade -y
 
 # Remove unnecessary Ubuntu Server-specific packages
-sudo apt purge --autoremove ubuntu-server -y
+sudo apt purge --autoremove ubuntu-desktop -y
 
 # Add the Pop OS ISO signing key
 sudo gpg --keyserver keyserver.ubuntu.com --recv-keys 63C46DF0140D738961429F4E204DD8AEC33A7AFF
