@@ -3,7 +3,15 @@
 # Update system
 sudo apt update -y && sudo apt full-upgrade -y
 
-# Remove unnecessary Ubuntu Server-specific packages
+# Remove unnecessary Ubuntu Desktop-specific packages
+sudo apt-get remove ubuntu-gnome-desktop -y
+sudo apt-get remove gnome-shell -y
+sudo apt-get remove --auto-remove ubuntu-gnome-desktop -y
+sudo apt-get purge ubuntu-gnome-desktop -y
+sudo apt-get purge --auto-remove ubuntu-gnome-desktop -y
+sudo apt-get autoremove -y
+sudo dpkg-reconfigure gdm -y
+sudo apt-get remove gdm -y
 sudo apt purge --autoremove ubuntu-desktop -y
 
 # Add the Pop OS ISO signing key
