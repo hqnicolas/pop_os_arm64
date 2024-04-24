@@ -6,19 +6,8 @@ BRANCH=${ARMBIAN_BRANCH:-stable}
 BOARD=${ARMBIAN_BOARD:-raspberrypi4}
 DISTROID=armbian
 scripted=1
+command="hold"
 
-# Functions and variables here... (leave unchanged)
-
-# Freeze and unfreeze kernel and board support packages
-FREEZE="Freeze" | "Unfreeze"
-case $1 in
-    $FREEZE )
-        command="hold"
-        ;;
-    un${FREEZE} )
-        command="unhold"
-        ;;
-esac
 
 if ! is_package_manager_running; then
     # ... (code here remains unchanged)
