@@ -9,6 +9,9 @@ sudo apt install libv4l-rkmpp
 sudo apt install v4l-utils
 sudo apt install ffmpeg
 
+sudo apt install glmark2-es2-wayland
+glmark2-es2-wayland
+
 # Edit the file /etc/gdm3/custom.conf 
 # WaylandEnable=true 
 
@@ -19,9 +22,6 @@ replace="WaylandEnable=true"
 
 # Perform the substitution using sed
 sudo sed -i 's/$search_patt/$replace/g' $file_pat
-
-sudo apt install glmark2-es2-wayland
-glmark2-es2-wayland
 
 # Define the file path and search-and-replace patterns
 file_path="/etc/rc.local"
