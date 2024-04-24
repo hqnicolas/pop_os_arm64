@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo add-apt-repository ppa:liujianfeng1994/panfork-mesa
 sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia
 sudo apt update
