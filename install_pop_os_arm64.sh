@@ -10,7 +10,7 @@ scripted=1
 # Functions and variables here... (leave unchanged)
 
 # Freeze and unfreeze kernel and board support packages
-FREEZE="Freeze" | "Unfreeze" )
+FREEZE="Freeze" | "Unfreeze"
 case $1 in
     $FREEZE )
         command="hold"
