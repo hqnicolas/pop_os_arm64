@@ -6,6 +6,7 @@ cd shop
 sudo add-apt-repository ppa:apandada1/libhandy-1
 sudo apt-get update
 sudo apt install libhandy-1-dev
+sudo apt install libpolkit-gobject-1-dev
 meson build --prefix=/usr
 cd build
 sudo apt install generate-ninja
