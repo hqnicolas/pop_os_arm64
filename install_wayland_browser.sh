@@ -12,14 +12,20 @@ sudo apt install ffmpeg
 sudo apt install glmark2-es2-wayland
 glmark2-es2-wayland
 
-# sudo nano /etc/rc.local
-# Copy and paste below, above the "exit o" line.
-# echo dec > /dev/video-dec0
-# chown root:video /dev/video-dec0
-# chmod 0660 /dev/video-dec0
-# echo enc > /dev/video-enc0
-# chown root:video /dev/video-enc0
-# chmod 0660 /dev/video-enc0
+# Define the file path and search-and-replace patterns
+file_path="/etc/rc.local"
+search_pattern="exit o"
+replacement="echo dec > /dev/video-dec0
+chown root:video /dev/video-dec0
+chmod 0660 /dev/video-dec0
+echo enc > /dev/video-enc0
+chown root:video /dev/video-enc0
+chmod 0660 /dev/video-enc0
+exit o"
+
+# Perform the substitution using sed
+sed -i "s/$search_pattern/$replacement/g" $file_path
+
 
 # sudo nano /etc/udev/rules.d/11-rockchip-multimedia.rules
 # KERNEL=="mpp_service", MODE="0660", GROUP="video"
