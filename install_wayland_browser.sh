@@ -3,12 +3,11 @@ sudo add-apt-repository ppa:liujianfeng1994/panfork-mesa
 sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia
 sudo apt update
 sudo apt dist-upgrade
-sudo apt install mali-g610-firmware rockchip-multimedia-config
+sudo apt install rockchip-multimedia-config
+sudo apt install mali-bifrost-wayland-driver
 sudo apt install libv4l-rkmpp
 sudo apt install v4l-utils
 sudo apt install ffmpeg
-
-sudo apt install mali-bifrost-wayland-driver
 
 sudo apt install glmark2-es2-wayland
 glmark2-es2-wayland
