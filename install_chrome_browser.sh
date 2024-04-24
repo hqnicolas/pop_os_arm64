@@ -8,6 +8,9 @@ sudo apt install libv4l-rkmpp
 sudo apt install v4l-utils
 sudo apt install ffmpeg
 
+env MOZ_ENABLE_WAYLAND=1 /snap/bin/firefox
+export MOZ_ENABLE_WAYLAND=1
+
 # sudo nano /etc/rc.local
 # Copy and paste below, above the "exit o" line.
 # echo dec > /dev/video-dec0
