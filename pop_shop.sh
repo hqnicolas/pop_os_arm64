@@ -7,8 +7,9 @@ sudo ninja install
 sudo apt install libhandy-1-dev
 sudo apt install libpolkit-gobject-1-dev
 cd shop 
-meson build --prefix=/usr
+sudo meson build --prefix=/usr
 cd build
-ninja
+sudo ninja
+sudo ninja install
 # Reboot the system
 sudo reboot
