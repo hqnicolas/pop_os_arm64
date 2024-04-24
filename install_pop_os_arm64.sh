@@ -46,9 +46,5 @@ sudo apt update -y && sudo apt full-upgrade -y
 # install desktop from system76 ppa
 sudo apt install pop-desktop
 
-# Edit the file /etc/gdm3/custom.conf 
-# WaylandEnable=true 
-
-
 # Reboot the system
 sudo reboot
