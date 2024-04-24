@@ -14,7 +14,7 @@ sudo apt install ffmpeg
 
 # Define the file path and search-and-replace patterns
 file_pat="/etc/gdm3/custom.conf"
-search_patt="# WaylandEnable=false"
+search_patt="WaylandEnable=false"
 replace="WaylandEnable=true"
 
 # Perform the substitution using sed
