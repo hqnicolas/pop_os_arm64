@@ -10,3 +10,5 @@ meson build --prefix=/usr
 cd build
 ninja
 sudo ninja install
+# Reboot the system
+sudo reboot
