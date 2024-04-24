@@ -24,7 +24,7 @@ chmod 0660 /dev/video-enc0
 exit o"
 
 # Perform the substitution using sed
-sed -i "s/$search_pattern/$replacement/g" $file_path
+sudo sed -i "s/$search_pattern/$replacement/g" $file_path
 
 
 # sudo nano /etc/udev/rules.d/11-rockchip-multimedia.rules
