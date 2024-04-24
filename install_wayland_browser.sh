@@ -8,7 +8,10 @@ sudo apt install libv4l-rkmpp
 sudo apt install v4l-utils
 sudo apt install ffmpeg
 
-$ sudo apt install mali-bifrost-wayland-driver
+sudo apt install mali-bifrost-wayland-driver
+
+sudo apt install glmark2-es2-wayland
+
 
 # sudo nano /etc/rc.local
 # Copy and paste below, above the "exit o" line.
