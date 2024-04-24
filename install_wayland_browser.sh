@@ -25,17 +25,22 @@ glmark2-es2-wayland
 
 # Define the file path and search-and-replace patterns
 file_path="/etc/rc.local"
-search_pattern="exit o"
+search_pattern="
+exit 0
+"
 replacement="echo dec > /dev/video-dec0
 chown root:video /dev/video-dec0
 chmod 0660 /dev/video-dec0
 echo enc > /dev/video-enc0
 chown root:video /dev/video-enc0
 chmod 0660 /dev/video-enc0
-exit o"
+
+exit 0
+"
 
 # Perform the substitution using sed
-sudo sed -i "s/$search_pattern/$replacement/g" $file_path
+sudo sed -i "s@$search_pattern@$replacement@g" $file_path
+
 
 # Define the file path and text to be appended
 file_path="/etc/udev/rules.d/11-rockchip-multimedia.rules"
