@@ -9,10 +9,7 @@ scripted=1
 command="hold"
 
 
-if ! is_package_manager_running; then
-    # ... (code here remains unchanged)
-
-    local command="unhold"
+    local command="hold"
     [[ $1 == "Freeze" ]] && local command="hold"
     for word in $PACKAGE_LIST; do apt-mark $command $word; done | dialog --backtitle "$BACKTITLE" --title "Packages ${1,,}" --progressbox $((${#words[@]}+2)) 64
 fi
