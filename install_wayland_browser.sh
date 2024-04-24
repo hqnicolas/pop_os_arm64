@@ -39,12 +39,15 @@ sudo sed -i "s/$search_pattern/$replacement/g" $file_path
 
 # Define the file path and text to be appended
 file_path="/etc/udev/rules.d/11-rockchip-multimedia.rules"
-text_to_append="KERNEL=="mpp_service", MODE="0660", GROUP="video"
-KERNEL=="rga", MODE="0660", GROUP="video"
-KERNEL=="system-dma32", MODE="0666", GROUP="video"
-KERNEL=="system-uncached-dma32", MODE="0666", GROUP="video" RUN+="/usr/bin/chmod a+rw /dev/dma_heap""
+text_to_append1="KERNEL=="mpp_service", MODE="0660", GROUP="video""
+text_to_append2="KERNEL=="rga", MODE="0660", GROUP="video""
+text_to_append3="KERNEL=="system-dma32", MODE="0666", GROUP="video""
+text_to_append4="KERNEL=="system-uncached-dma32", MODE="0666", GROUP="video" RUN+="/usr/bin/chmod a+rw /dev/dma_heap""
 
 # Append the text to the file
-echo "$text_to_append" >> $file_path
+echo "$text_to_append1" >> $file_path
+echo "$text_to_append2" >> $file_path
+echo "$text_to_append3" >> $file_path
+echo "$text_to_append4" >> $file_path
 
 $ sudo reboot
