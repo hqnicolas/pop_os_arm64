@@ -7,7 +7,7 @@ meson build --prefix=/usr
 cd build
 sudo apt install generate-ninja
 gn gen out/Default
-ninja
 sudo ninja install
+ninja
 # Reboot the system
 sudo reboot
