@@ -7,6 +7,27 @@ BOARD=${ARMBIAN_BOARD:-raspberrypi4}
 DISTROID=armbian
 scripted=1
 command="hold"
+
+			unset PACKAGE_LIST
+
+			# basic packages
+
+			check_if_installed linux-u-boot-${BOARD}-${BRANCH} && PACKAGE_LIST+=" linux-u-boot-${BOARD}-${BRANCH}"
+			check_if_installed linux-image-${BRANCH}-${LINUXFAMILY} && PACKAGE_LIST+=" linux-image-${BRANCH}-${LINUXFAMILY}"
+			check_if_installed linux-dtb-${BRANCH}-${LINUXFAMILY} && PACKAGE_LIST+=" linux-dtb-${BRANCH}-${LINUXFAMILY}"
+			check_if_installed linux-headers-${BRANCH}-${LINUXFAMILY} && PACKAGE_LIST+=" linux-headers-${BRANCH}-${LINUXFAMILY}"
+
+			# new BSP
+			check_if_installed armbian-${LINUXFAMILY} && PACKAGE_LIST+=" armbian-${LINUXFAMILY}"
+			check_if_installed armbian-${BOARD} && PACKAGE_LIST+=" armbian-${BOARD}"
+			check_if_installed armbian-${DISTROID} && PACKAGE_LIST+=" armbian-${DISTROID}"
+			check_if_installed armbian-bsp-cli-${BOARD} && PACKAGE_LIST+=" armbian-bsp-cli-${BOARD}"
+			check_if_installed armbian-${DISTROID}-desktop-xfce && PACKAGE_LIST+=" armbian-${DISTROID}-desktop-xfce"
+			check_if_installed armbian-firmware && PACKAGE_LIST+=" armbian-firmware"
+			check_if_installed armbian-firmware-full && PACKAGE_LIST+=" armbian-firmware-full"
+
+			local words=( $PACKAGE_LIST )
+
 [[ $1 == "Freeze" ]] && local command="hold"
 for word in $PACKAGE_LIST; do apt-mark $command $word; done | dialog --backtitle "$BACKTITLE" --title "Packages ${1,,}" --progressbox $((${#words[@]}+2)) 64
 
