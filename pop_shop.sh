@@ -11,5 +11,6 @@ sudo meson build --prefix=/usr
 cd build
 sudo ninja
 sudo ninja install
+sudo io.elementary.appcenter --gapplication-replace
 # Reboot the system
 sudo reboot
