@@ -9,8 +9,7 @@ sudo apt install v4l-utils
 sudo apt install ffmpeg
 
 sudo apt-get install firefox
-env MOZ_ENABLE_WAYLAND=1 /snap/bin/firefox
-export MOZ_ENABLE_WAYLAND=1
+sudo snap install snap-store
 
 # sudo nano /etc/rc.local
 # Copy and paste below, above the "exit o" line.
