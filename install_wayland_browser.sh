@@ -8,8 +8,7 @@ sudo apt install libv4l-rkmpp
 sudo apt install v4l-utils
 sudo apt install ffmpeg
 
-sudo apt-get install firefox
-sudo snap install snap-store
+$ sudo apt install mali-bifrost-wayland-driver
 
 # sudo nano /etc/rc.local
 # Copy and paste below, above the "exit o" line.
@@ -25,3 +24,5 @@ sudo snap install snap-store
 # KERNEL=="rga", MODE="0660", GROUP="video"
 # KERNEL=="system-dma32", MODE="0666", GROUP="video"
 # KERNEL=="system-uncached-dma32", MODE="0666", GROUP="video" RUN+="/usr/bin/chmod a+rw /dev/dma_heap"
+
+$ sudo reboot
