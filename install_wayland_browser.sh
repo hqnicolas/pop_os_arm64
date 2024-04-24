@@ -13,7 +13,7 @@ sudo apt install ffmpeg
 # WaylandEnable=true 
 
 # Define the file path and search-and-replace patterns
-file_pat="/etc/gdm3/custom.conf "
+file_pat="/etc/gdm3/custom.conf"
 search_patt="# WaylandEnable=false"
 replace="WaylandEnable=true"
 
