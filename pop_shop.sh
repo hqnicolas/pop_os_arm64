@@ -8,6 +8,8 @@ sudo python3 setup.py install
 cd shop 
 meson build --prefix=/usr
 cd build
+sudo apt install generate-ninja
+gn gen out/Default
 ninja
 sudo ninja install
 # Reboot the system
