@@ -7,12 +7,8 @@ BOARD=${ARMBIAN_BOARD:-raspberrypi4}
 DISTROID=armbian
 scripted=1
 command="hold"
-
-
-    local command="hold"
-    [[ $1 == "Freeze" ]] && local command="hold"
-    for word in $PACKAGE_LIST; do apt-mark $command $word; done | dialog --backtitle "$BACKTITLE" --title "Packages ${1,,}" --progressbox $((${#words[@]}+2)) 64
-fi
+[[ $1 == "Freeze" ]] && local command="hold"
+for word in $PACKAGE_LIST; do apt-mark $command $word; done | dialog --backtitle "$BACKTITLE" --title "Packages ${1,,}" --progressbox $((${#words[@]}+2)) 64
 
 # Update system
 sudo apt update -y && sudo apt full-upgrade -y
