@@ -1,10 +1,8 @@
 #!/bin/bash
 sudo add-apt-repository ppa:liujianfeng1994/panfork-mesa
 sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia
-sudo add-apt-repository ppa:liujianfeng1994/chromium
 sudo apt update
 sudo apt dist-upgrade
-sudo apt install chromium
 sudo apt install rockchip-multimedia-config
 sudo apt install mali-bifrost-wayland-driver
 sudo apt install libv4l-rkmpp
