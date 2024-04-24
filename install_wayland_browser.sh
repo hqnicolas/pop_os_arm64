@@ -18,25 +18,21 @@ search_patt="WaylandEnable=false"
 replace="WaylandEnable=true"
 
 # Perform the substitution using sed
-sudo sed -i "s/$search_patt/$replace/g" $file_pat
+sudo sed -i 's/$search_patt/$replace/g' $file_pat
 
 sudo apt install glmark2-es2-wayland
 glmark2-es2-wayland
 
 # Define the file path and search-and-replace patterns
 file_path="/etc/rc.local"
-search_pattern="
-exit 0
-"
+search_pattern="exit 0"
 replacement="echo dec > /dev/video-dec0
 chown root:video /dev/video-dec0
 chmod 0660 /dev/video-dec0
 echo enc > /dev/video-enc0
 chown root:video /dev/video-enc0
 chmod 0660 /dev/video-enc0
-
-exit 0
-"
+exit 0"
 
 # Perform the substitution using sed
 sudo sed -i "s@$search_pattern@$replacement@g" $file_path
