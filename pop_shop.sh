@@ -8,6 +8,7 @@ sudo apt install libhandy-1-dev
 sudo apt install libpolkit-gobject-1-dev
 cd shop 
 apt-get install meson
+sudo apt install valac
 sudo meson build --prefix=/usr
 cd build
 sudo ninja
