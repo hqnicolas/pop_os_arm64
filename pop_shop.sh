@@ -1,11 +1,9 @@
 #!/bin/bash
-sudo apt install git
+sudo apt install git -y
 sudo add-apt-repository ppa:apandada1/libhandy-1
-git clone https://github.com/pop-os/shop.git
 sudo apt-get install gettext libappstream-dev libgee-0.8-dev libgranite-dev libgtk-3-dev libjson-glib-dev libpackagekit-glib2-dev libsoup2.4-dev libunity-dev libxml2-dev libxml2-utils repoman meson valac make build-essential cmake libhandy-0.0-dev libflatpak-dev flatpak -y
 sudo apt install libhandy-1-dev -y
 sudo apt install libpolkit-gobject-1-dev -y
-cd shop 
 apt-get install meson -y
 sudo apt install valac -y
 sudo apt install libgee-0.8-2 -y
@@ -32,6 +30,8 @@ sudo apt install gnome-software-plugin-flatpak -y
 git clone https://github.com/pop-os/repoman.git
 cd repoman
 sudo python3 setup.py install
+git clone https://github.com/pop-os/shop.git
+cd shop
 sudo meson build --prefix=/usr
 cd build
 sudo ninja
