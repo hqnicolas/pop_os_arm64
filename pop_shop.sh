@@ -7,9 +7,7 @@ sudo ninja install
 sudo apt install libhandy-1-dev
 sudo apt install libpolkit-gobject-1-dev
 cd shop 
-sudo apt install python3-pip
-pip3 uninstall meson
-pip3 install --user meson
+apt-get install meson
 sudo meson build --prefix=/usr
 cd build
 sudo ninja
