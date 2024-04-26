@@ -9,27 +9,27 @@ sudo apt install libpolkit-gobject-1-dev
 cd shop 
 apt-get install meson
 sudo apt install valac
-sudo apt install libgee-0.8-2
-sudo apt install libgee-0.8-dev
-sudo apt install libgranite-dev
-sudo apt install libappstream-dev
-sudo apt install libjson-glib-dev
-sudo apt install libflatpak-dev
-sudo apt install libgtk-3-dev
-sudo apt install libxml2-utils
-sudo apt install libxml2-dev
-sudo apt install gettext
-sudo apt install libappstream-dev
-sudo apt install libflatpak-dev
-sudo apt install libgee-0.8-dev
-sudo apt install libgranite-dev
-sudo apt install libgtk-3-dev
-sudo apt install libhandy-1-dev
-sudo apt install libjson-glib-dev
-sudo apt install libpackagekit-glib2-dev
-sudo apt install libpolkit-gobject-1-dev
-sudo apt install libsoup2.4-dev
-sudo apt install gnome-software-plugin-flatpak
+sudo apt install libgee-0.8-2 -y
+sudo apt install libgee-0.8-dev -y
+sudo apt install libgranite-dev -y
+sudo apt install libappstream-dev -y
+sudo apt install libjson-glib-dev -y
+sudo apt install libflatpak-dev -y
+sudo apt install libgtk-3-dev -y
+sudo apt install libxml2-utils -y
+sudo apt install libxml2-dev -y
+sudo apt install gettext -y
+sudo apt install libappstream-dev -y
+sudo apt install libflatpak-dev -y
+sudo apt install libgee-0.8-dev -y
+sudo apt install libgranite-dev -y
+sudo apt install libgtk-3-dev -y
+sudo apt install libhandy-1-dev -y
+sudo apt install libjson-glib-dev -y
+sudo apt install libpackagekit-glib2-dev -y
+sudo apt install libpolkit-gobject-1-dev -y
+sudo apt install libsoup2.4-dev -y
+sudo apt install gnome-software-plugin-flatpak -y
 git clone https://github.com/pop-os/repoman.git
 cd repoman
 sudo python3 setup.py install
@@ -38,7 +38,7 @@ cd build
 sudo ninja
 sudo ninja install
 sudo io.elementary.appcenter --gapplication-replace
-sudo apt install snapd
+sudo apt install snapd -y
 sudo snap install snap-store
 sudo snap install ms-365-electron
 # Reboot the system
