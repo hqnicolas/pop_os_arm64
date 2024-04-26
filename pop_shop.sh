@@ -7,12 +7,13 @@ sudo ninja install
 sudo apt install libhandy-1-dev
 sudo apt install libpolkit-gobject-1-dev
 cd shop 
+sudo apt install python3-pip
+pip3 uninstall meson
+pip3 install --user meson
 sudo meson build --prefix=/usr
 cd build
 sudo ninja
 sudo ninja install
 sudo io.elementary.appcenter --gapplication-replace
 # Reboot the system
-sudo apt install snapd
-sudo snap install snap-store
 sudo reboot
