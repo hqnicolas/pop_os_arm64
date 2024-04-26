@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia
 sudo apt update
 sudo apt dist-upgrade
 sudo apt install libv4l-rkmpp -y
