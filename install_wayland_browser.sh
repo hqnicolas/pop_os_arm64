@@ -11,7 +11,7 @@ sudo apt install chromium-browser -y
 sudo apt install libv4l-rkmpp -y
 
 sudo apt install glmark2-es2-wayland -y
-glmark2-es2-wayland
+# glmark2-es2-wayland
 
 # Edit the file /etc/gdm3/custom.conf 
 # WaylandEnable=true 
