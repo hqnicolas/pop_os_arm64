@@ -38,7 +38,7 @@ cd build
 sudo ninja
 sudo ninja install
 sudo io.elementary.appcenter --gapplication-replace
-sudo apt install snap
+sudo apt install snapd
 sudo snap install snap-store
 # Reboot the system
 sudo reboot
