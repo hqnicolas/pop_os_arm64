@@ -9,6 +9,11 @@ sudo apt install libpolkit-gobject-1-dev
 cd shop 
 apt-get install meson
 sudo apt install valac
+sudo apt install libgee-0.8-2
+sudo apt install libgee-0.8-dev
+sudo apt install libgranite-dev
+sudo apt install libappstream-dev
+sudo apt install libjson-glib-dev
 sudo meson build --prefix=/usr
 cd build
 sudo ninja
