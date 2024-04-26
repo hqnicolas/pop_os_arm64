@@ -1,9 +1,14 @@
 #!/bin/bash
+sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia
 sudo apt update
 sudo apt dist-upgrade
 sudo apt install libv4l-rkmpp -y
 sudo apt install v4l-utils -y
 sudo apt install ffmpeg -y
+sudo apt install rockchip-multimedia-config -y
+sudo apt install v4l-utils -y
+sudo apt install chromium-browser -y
+sudo apt install libv4l-rkmpp -y
 
 sudo apt install glmark2-es2-wayland -y
 glmark2-es2-wayland
