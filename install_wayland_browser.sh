@@ -11,29 +11,18 @@ glmark2-es2-wayland
 # Edit the file /etc/gdm3/custom.conf 
 # WaylandEnable=true 
 
-# Define the file path and search-and-replace patterns
-/etc/gdm3/custom.conf
+sudo sed -i 's/WaylandEnable=false/WaylandEnable=true/' /etc/gdm3/custom.conf
 
-WaylandEnable=true
-
+sudo sed -i 's/exit 0$/echo dec > \/dev\/video-dec0\nchown root:video \/dev\/video-dec0\nchmod 0660 \/dev\/video-dec0\necho enc > \/dev\/video-enc0\nchown root:video \/dev\/video-enc0\nchmod 0660 \/dev\/video-enc0\nexit 0/g' /etc/rc.local
 
 
-/etc/rc.local
+#!/bin/bash
 
-echo dec > /dev/video-dec0
-chown root:video /dev/video-dec0
-chmod 0660 /dev/video-dec0
-echo enc > /dev/video-enc0
-chown root:video /dev/video-enc0
-chmod 0660 /dev/video-enc0
-
-
-/etc/udev/rules.d/11-rockchip-multimedia.rules
-
-KERNEL=="mpp_service", MODE="0660", GROUP="video"
-KERNEL=="rga", MODE="0660", GROUP="video"
-KERNEL=="system-dma32", MODE="0666", GROUP="video"
-KERNEL=="system-uncached-dma32", MODE="0666", GROUP="video" RUN+="/usr/bin/chmod a+rw /dev/dma_heap"
+echo -e "# Add multimedia group permissions\n" > /etc/udev/rules.d/11-rockchip-multimedia.rules
+echo -e "KERNEL==\"mpp_service\", MODE=\"0660\", GROUP=\"video\"\n" >> /etc/udev/rules.d/11-rockchip-multimedia.rules
+echo -e "KERNEL==\"rga\", MODE=\"0660\", GROUP=\"video\"\n" >> /etc/udev/rules.d/11-rockchip-multimedia.rules
+echo -e "KERNEL==\"system-dma32\", MODE=\"0666\", GROUP=\"video\"\n" >> /etc/udev/rules.d/11-rockchip-multimedia.rules
+echo -e "KERNEL==\"system-uncached-dma32\", MODE=\"0666\", GROUP=\"video\"RUN+=\"/usr/bin/chmod a+rw /dev/dma_heap\"\n" >> /etc/udev/rules.d/11-rockchip-multimedia.rules
 
 
 $ sudo reboot
