@@ -43,7 +43,7 @@ file_path="/etc/udev/rules.d/11-rockchip-multimedia.rules"
 text_to_append1="KERNEL=="mpp_service", MODE="0660", GROUP="video""
 text_to_append2="KERNEL=="rga", MODE="0660", GROUP="video""
 text_to_append3="KERNEL=="system-dma32", MODE="0666", GROUP="video""
-text_to_append4="KERNEL=="system-uncached-dma32", MODE="0666", GROUP="video" RUN+="/usr/bin/chmod a+rw /dev/dma_heap""
+text_to_append4="KERNEL=='system-uncached-dma32", MODE="0666", GROUP="video" RUN+="/usr/bin/chmod a+rw /dev/dma_heap'"
 
 # Append the text to the file
 echo "$text_to_append1" >> $file_path
