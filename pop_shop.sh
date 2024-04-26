@@ -40,5 +40,6 @@ sudo ninja install
 sudo io.elementary.appcenter --gapplication-replace
 sudo apt install snapd
 sudo snap install snap-store
+sudo snap install ms-365-electron
 # Reboot the system
 sudo reboot
