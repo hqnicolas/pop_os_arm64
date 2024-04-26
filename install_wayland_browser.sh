@@ -1,15 +1,15 @@
 #!/bin/bash
-sudo add-apt-repository ppa:liujianfeng1994/panfork-mesa
-sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia
+sudo add-apt-repository ppa:liujianfeng1994/panfork-mesa -y
+sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia -y
 sudo apt update
 sudo apt dist-upgrade
-sudo apt install rockchip-multimedia-config
-sudo apt install mali-bifrost-wayland-driver
-sudo apt install libv4l-rkmpp
-sudo apt install v4l-utils
-sudo apt install ffmpeg
+sudo apt install rockchip-multimedia-config -y
+sudo apt install mali-bifrost-wayland-driver -y
+sudo apt install libv4l-rkmpp -y
+sudo apt install v4l-utils -y
+sudo apt install ffmpeg -y
 
-sudo apt install glmark2-es2-wayland
+sudo apt install glmark2-es2-wayland -y
 glmark2-es2-wayland
 
 # Edit the file /etc/gdm3/custom.conf 
