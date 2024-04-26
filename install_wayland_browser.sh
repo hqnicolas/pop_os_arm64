@@ -26,4 +26,4 @@ echo -e "KERNEL==\"rga\", MODE=\"0660\", GROUP=\"video\"\n" >> /etc/udev/rules.d
 echo -e "KERNEL==\"system-dma32\", MODE=\"0666\", GROUP=\"video\"\n" >> /etc/udev/rules.d/11-rockchip-multimedia.rules
 echo -e "KERNEL==\"system-uncached-dma32\", MODE=\"0666\", GROUP=\"video\"RUN+=\"/usr/bin/chmod a+rw /dev/dma_heap\"\n" >> /etc/udev/rules.d/11-rockchip-multimedia.rules
 
-$ sudo reboot
+sudo reboot
