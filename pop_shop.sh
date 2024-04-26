@@ -14,6 +14,8 @@ sudo apt install libgee-0.8-dev
 sudo apt install libgranite-dev
 sudo apt install libappstream-dev
 sudo apt install libjson-glib-dev
+sudo apt install flatpak
+sudo apt install gnome-software-plugin-flatpak
 sudo meson build --prefix=/usr
 cd build
 sudo ninja
