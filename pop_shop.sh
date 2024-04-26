@@ -14,8 +14,25 @@ sudo apt install libgee-0.8-dev
 sudo apt install libgranite-dev
 sudo apt install libappstream-dev
 sudo apt install libjson-glib-dev
-sudo apt install flatpak
+sudo apt install libflatpak-dev
+sudo apt install libgtk-3-dev
+sudo apt install libxml2-utils
+sudo apt install libxml2-dev
+sudo apt install gettext
+sudo apt install libappstream-dev
+sudo apt install libflatpak-dev
+sudo apt install libgee-0.8-dev
+sudo apt install libgranite-dev
+sudo apt install libgtk-3-dev
+sudo apt install libhandy-1-dev
+sudo apt install libjson-glib-dev
+sudo apt install libpackagekit-glib2-dev
+sudo apt install libpolkit-gobject-1-dev
+sudo apt install libsoup2.4-dev
 sudo apt install gnome-software-plugin-flatpak
+git clone https://github.com/pop-os/repoman.git
+cd repoman
+sudo python3 setup.py install
 sudo meson build --prefix=/usr
 cd build
 sudo ninja
