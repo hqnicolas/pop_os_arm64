@@ -6,10 +6,15 @@ This script is for the installation of POP!_OS on top of Ubuntu 22.04 LTS Arm64 
 
 ## Freeze Your Kernel
 ```bash
-sudo apt-get install armbian-config
+wget https://raw.githubusercontent.com/hqnicolas/pop_os_arm64/main/prepare.sh
+sudo chmod 777 prepare.sh
+sudo ./prepare.sh
 sudo armbian-config
-# SYSTEM, # FREEZE, # KERNEL
 ```
+# SYSTEM
+# FREEZE
+# KERNEL
+
 ## Install
 ```bash
 wget https://raw.githubusercontent.com/hqnicolas/pop_os_arm64/main/install_pop_os_arm64.sh
