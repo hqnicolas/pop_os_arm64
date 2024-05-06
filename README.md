@@ -11,9 +11,9 @@ sudo chmod 777 prepare.sh
 sudo ./prepare.sh
 sudo armbian-config
 ```
-# SYSTEM
-# FREEZE
-# KERNEL
+- Enter: SYSTEM
+- Go to: FREEZE
+- Select: KERNEL
 
 ## Install
 ```bash
