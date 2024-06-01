@@ -6,6 +6,7 @@ This script is for the installation of POP!_OS on top of Ubuntu 22.04 LTS Arm64 
 
 ## Freeze Your Kernel
 ```bash
+sudo apt-mark hold linux-image-6.1.0-1014-rockchip  linux-headers-6.1.0-1014-rockchip
 wget https://raw.githubusercontent.com/hqnicolas/pop_os_arm64/main/prepare.sh
 sudo chmod 777 prepare.sh
 sudo ./prepare.sh
