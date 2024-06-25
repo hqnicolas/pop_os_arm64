@@ -1,7 +1,7 @@
 #!/bin/bash
-sudo add-apt-repository -r http://apt.pop-os.org/staging/master
-sudo add-apt-repository -r http://apt.pop-os.org/release
-sudo add-apt-repository -r https://ppa.launchpadcontent.net/system76/pop/ubuntu
+sudo add-apt-repository -r http://apt.pop-os.org/staging/master -y
+sudo add-apt-repository -r http://apt.pop-os.org/release -y
+sudo add-apt-repository -r https://ppa.launchpadcontent.net/system76/pop/ubuntu -y
 
 sudo apt update
 
