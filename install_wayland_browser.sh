@@ -1,4 +1,8 @@
 #!/bin/bash
+sudo add-apt-repository -r http://apt.pop-os.org/staging/master
+sudo add-apt-repository -r http://apt.pop-os.org/release
+sudo add-apt-repository -r https://ppa.launchpadcontent.net/system76/pop/ubuntu
+
 sudo apt update
 
 sudo apt install glmark2-es2-wayland -y
