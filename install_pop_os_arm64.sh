@@ -22,10 +22,6 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 63C46DF0140D738961
 # Add the Pop OS APT repositories
 sudo add-apt-repository "deb http://apt.pop-os.org/release $(lsb_release -cs) main" -y
 sudo add-apt-repository "deb http://apt.pop-os.org/proprietary $(lsb_release -cs) main" -y
-sudo add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs) main multiverse restricted universe" -y
-sudo add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs)-security main multiverse restricted universe" -y
-sudo add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs)-updates main multiverse restricted universe" -y
-sudo add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs)-proposed main multiverse restricted universe" -y
 sudo add-apt-repository system76/pop
 
 # Update system again
