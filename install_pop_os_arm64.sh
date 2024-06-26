@@ -14,11 +14,6 @@ sudo dpkg-reconfigure gdm -y
 sudo apt-get remove gdm -y
 sudo apt purge --autoremove ubuntu-desktop -y
 
-# Add the Pop OS ISO signing key
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 63C46DF0140D738961429F4E204DD8AEC33A7AFF
-
-
-
 # Add the Pop OS APT repositories
 sudo add-apt-repository "deb http://apt.pop-os.org/release $(lsb_release -cs) main" -y
 sudo add-apt-repository "deb http://apt.pop-os.org/proprietary $(lsb_release -cs) main" -y
