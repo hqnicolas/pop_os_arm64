@@ -47,4 +47,3 @@ sudo apt update -y && sudo apt full-upgrade -y
 sudo apt install pop-desktop
 
 # Reboot the system
-sudo reboot
