@@ -1,8 +1,11 @@
 #!/bin/bash
 sudo apt install git -y
 sudo add-apt-repository ppa:apandada1/libhandy-1 -y
+sudo apt-get remove libappstream4
+sudo apt-get install libappstream4=0.15.2-2
 sudo apt-get install gettext libappstream-dev libgee-0.8-dev libgranite-dev libgtk-3-dev libjson-glib-dev libpackagekit-glib2-dev libsoup2.4-dev libunity-dev libxml2-dev libxml2-utils repoman meson valac make build-essential cmake libhandy-0.0-dev libflatpak-dev flatpak -y
-apt-get install libappstream-glib-dev libgranite-dev elementary-sdk valac meson libhandy-1-dev libgee-0.8-2 libpolkit-gobject-1-dev libsoup2.4-dev gnome-software-plugin-flatpak -y
+sudo apt-get install flatpak gettext gir1.2-appstream-1.0 libappstream4 libappstream-dev libflatpak-dev libgee-0.8-dev libgranite-dev libgtk-3-dev libhandy-1-dev libjson-glib-dev libpackagekit-glib2-dev libpolkit-gobject-1-dev libsoup2.4-dev libxml2-dev libxml2-utils meson valac
+libgranite-dev elementary-sdk valac meson libhandy-1-dev libgee-0.8-2 libpolkit-gobject-1-dev libsoup2.4-dev gnome-software-plugin-flatpak -y
 git clone https://github.com/pop-os/repoman.git
 cd repoman
 sudo python3 setup.py install
