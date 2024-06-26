@@ -22,8 +22,8 @@ sudo chown root:root /etc/apt/trusted.gpg.d/pop_os.gpg
 sudo chmod 644 /etc/apt/trusted.gpg.d/pop_os.gpg
 
 # Add the Pop OS APT repositories
-sudo add-apt-repository "deb http://apt.pop-os.org/release jammy main" -y
-sudo add-apt-repository "deb http://apt.pop-os.org/staging/master jammy main" -y
+sudo add-apt-repository "deb http://apt.pop-os.org/release $(lsb_release -cs) main" -y
+sudo add-apt-repository "deb http://apt.pop-os.org/staging/master $(lsb_release -cs) main" -y
 
 # Update system again
 sudo apt update -y && sudo apt full-upgrade -y
@@ -47,3 +47,4 @@ sudo apt update -y && sudo apt full-upgrade -y
 sudo apt install pop-desktop
 
 # Reboot the system
+sudo reboot

@@ -1,9 +1,15 @@
 #!/bin/bash
-sudo add-apt-repository -r http://apt.pop-os.org/staging/master -y
-sudo add-apt-repository -r http://apt.pop-os.org/release -y
-sudo add-apt-repository -r https://ppa.launchpadcontent.net/system76/pop/ubuntu -y
-
+sudo add-apt-repository ppa:liujianfeng1994/panfork-mesa
+sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia
 sudo apt update
+sudo apt dist-upgrade
+sudo apt install panfork-mesa rockchip-multimedia-config libv4l-rkmpp -y
+sudo apt update
+sudo apt dist-upgrade
+sudo apt install v4l-utils -y
+sudo apt install ffmpeg -y
+sudo apt install v4l-utils -y
+sudo apt install libv4l-rkmpp -y
 
 sudo apt install glmark2-es2-wayland -y
 # glmark2-es2-wayland
