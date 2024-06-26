@@ -37,7 +37,13 @@ sudo sed -i 's/Enabled: yes/Enabled: no/g' /etc/apt/sources.list.d/system.source
 
 sudo apt-get install libdrm-nouveau2 libdrm-radeon1 libdrm2 libdrm-nouveau2 libdrm-radeon1 libdrm2 libdrm2 -y
 # install desktop from system76 ppa
-sudo apt install pop-desktop
+sudo apt install pop-desktop -y
+sudo mv /boot/initrd.img initrd.img.bkp
+sudo mv /boot/initrd.img.old initrd.img
+sudo mv /boot/vmlinuz /boot/vmlinuz.bkp
+sudo mv /boot/vmlinuz.old /boot/vmlinuz
+sudo mv /boot/uInitrd /boot/uInitrd.bkp
+sudo ln -s /boot/uInitrd-$(uname -r) /boot/uInitrd
 
 # Reboot the system
 sudo reboot
