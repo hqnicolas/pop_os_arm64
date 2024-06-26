@@ -26,6 +26,7 @@ sudo add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs) mai
 sudo add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs)-security main multiverse restricted universe" -y
 sudo add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs)-updates main multiverse restricted universe" -y
 sudo add-apt-repository "deb http://apt.pop-os.org/ubuntu $(lsb_release -cs)-proposed main multiverse restricted universe" -y
+sudo add-apt-repository system76/pop
 
 # Update system again
 sudo apt update -y && sudo apt full-upgrade -y
