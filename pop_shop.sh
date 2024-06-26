@@ -22,5 +22,7 @@ sudo snap install ms-365-electron
 # INSTALL NEW LANGUAGE sudo apt-get install language-pack-[cod] language-pack-gnome-[cod] language-pack-[cod]-base language-pack-gnome-[cod]-base 
 sudo apt-get install language-pack-pt language-pack-gnome-pt language-pack-pt-base language-pack-gnome-pt-base 
 sudo add-apt-repository -r ppa:apandada1/libhandy-1 -y
+cd ~
+sudo rm -rf shop
 # Reboot the system
 sudo reboot
